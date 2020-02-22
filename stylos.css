@@ -9,15 +9,17 @@
 .cabesera{
     width: 100%;
     height: 80px;
-    /* background-color: orange; */
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid black;
+    position: fixed;
+
 }
 
 .menu{
-    width: 75%;
+    width: 80%;
     height: 80px;
     /* background-color: cadetblue; */
     display: flex;
@@ -31,14 +33,16 @@
     /* background-color: red; */
     background-image: url(https://livedemo00.template-help.com/wt_62267_v8/62267-default/images/logo-default-347x65.png);
     background-repeat: no-repeat;
-    background-size: 160px;
+    background-size: contain;
     background-position: center;
     
 }
 
 .menu-enlaces{
-    width: 65%;
+    width: 75%;
     height: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
     /* background-color: palegreen; */
     
 }
@@ -57,8 +61,13 @@
 .lista-menu{
     text-decoration: none;
     color: black;
-    font-size: 12px;
+    font-size: 14px;
     font-family: 'Source Sans Pro', sans-serif;
+}
+
+.lista-menu:hover{
+    color: #2ed3ae;
+    transition: 0.5s;
 }
 
 .enlace-principal{
@@ -73,10 +82,24 @@
 }
 
 .btn-menu{
-    width: 155px;
+    width: 200px;
     height: 40px;
     /* background-color: rgb(45, 223, 45); */
  
+}
+
+.icon_rotet{
+    width: 20px;
+    margin-left: 5px;
+    height: 20px;
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+ .lista-menu  >  .icon_rotet:hover{
+     transform: rotate(-0.5turn);
+     transform-origin: center center;
+
 }
 
 .btn-enlaces:hover{
@@ -87,7 +110,7 @@
 }
 
 .btn-enlaces{
-    width: 150px;
+    width: 200px;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -95,7 +118,8 @@
     list-style: none;
     text-decoration: none;
     color: black;
-    font-size: 12px;
+    font-size: 15px;
+    padding: 10px 20px;
     font-family: 'Source Sans Pro', sans-serif;
     border: 1px solid rgb(194, 187, 187);
 }
@@ -436,9 +460,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
-    margin-right: -15px;
-    margin-left: -15px;
-    position: absolute;
 }
 
 .img-4-p1{
@@ -573,6 +594,7 @@
 
 .contenedor-card-5{
     width: 100%;
+    height: 500px;
     display: grid;
     margin-top: 30px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -580,150 +602,182 @@
     margin-top: 30px;
 }
 
-.card-enlaces-1{
+
+.content-card{
     width: 100%;
     height: 400px;
-    /* background-color: aquamarine; */
+    /* border: 1px solid black; */
 }
 
-.card-enlaces-1-1{
-    width: auto;
+
+
+
+
+.content-foto-1{
+    background-image:url(img/img-card-5.jpg) ;
+    width: 100%;
     height: 300px;
-    background-image: url(img/img-card-5.jpg);
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.card-enlaces-1-1:hover{
-    background:linear-gradient(
-        rgb(196, 188, 188) , blue);
-    transition: 0.5s;
-    opacity: 0.3;
-}
-
-
-.card-enlaces-2-1{
-    width: auto;
+.content-foto-2{
+    background-image:url(img/img-card-5-segundo.jpg) ;
+    width: 100%;
     height: 300px;
-    background-image: url(img/img-card-5-segundo.jpg);
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.card-enlaces-2-1:hover{
-    background: linear-gradient(
-        rgb(196, 188, 188) , blue);
-    transition: 0.5s;
-    opacity: 0.3;
-}
-
-
-.card-enlaces-3-1{
-    width: auto;
+.content-foto-3{
+    background-image:url(img/img-card-5-tersero.jpg) ;
+    width: 100%;
     height: 300px;
-    background-image: url(img/img-card-5-tersero.jpg);
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.card-enlaces-3-1:hover{
-    background: linear-gradient(
-        rgb(196, 188, 188) , blue);
-    transition: 0.5s;
-    opacity: 0.3;
+.content-texto{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-top: 20px;
 }
+
+.titulo-card{
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.titulo-card:hover{
+    color: #2ed3ae;
+    transition: .5s ease;
+}
+
+.parrafo-card{
+    font-family: 'Open Sans', sans-serif;
+    color: #dcd5d5;
+
+}
+
 
 /* enlaces a redes sociales */
 
 
-.enlaces_jpg{
+.content-lista{
     width: 100%;
     height: 300px;
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
 }
 
-.redes-socilaes{
-    width: 300px;
-    height: 100px;
-    border: 1px solid black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* ------------------repeticion de opacity------------ */
+
+.content-foto-1:hover {
+    opacity: .3;
 }
 
-.barra-social{
+.content-foto-1:hover  .content-lista{
+    opacity: 2;
+    transition: 0.5s;
+}
+
+
+
+.content-foto-2:hover {
+    opacity: .3;
+}
+
+.content-foto-2:hover  .content-lista{
+    opacity: 2;
+    transition: 0.5s;
+}
+
+.content-foto-3:hover {
+    opacity: .3;
+}
+
+.content-foto-3:hover  .content-lista{
+    opacity: 2;
+    transition: 0.5s;
+}
+
+/* ------------------repeticion de opacity------------ */
+
+
+
+
+.lista-social{
     list-style: none;
-    font-size: 20px;
+    font-size: 25px;
+    padding: 10px;
 }
 /* <------------enlace-facebook-------------> */
 .enlace_facebook{
     text-decoration: none;
-    color: black;
-    
+    color: #2ed3ae;
 }
 
 .enlace_facebook:hover{
-    color: #2ed3ae;
+    color: #1f957b;
     transition: 0.5s;
 }
 /* <------------enlace-facebook-------------> */
 /* <---------enlaces-google+----------------> */
-.enlace_google{
+.enlace_google-plus{
     text-decoration: none;
-    color: black;
-}
-.enlace_google:hover{
     color: #2ed3ae;
+}
+.enlace_google-plus:hover{
+    color: #1f957b;
     transition: 0.5s;
 }
 /* <---------enlaces-google+----------------> */
 /* <------------enlace-twitter--------------> */
-.enlace_twitter{
+.enlace_twitter1{
     text-decoration: none;
-    color: black;
+    color: #2ed3ae;
 }
 
-.enlace_twitter:hover{
-    color: #2ed3ae;
+.enlace_twitter1:hover{
+    color: #1f957b;
     transition: 0.5s;
 }
 /* <------------enlace-twitter--------------> */
 /* <-------------enlace-you-tube------------> */
-.enlace_you-tube{
+.enlace_youtube1{
     text-decoration: none;
-    color: black;
+    color: #2ed3ae;
 }
 
-.enlace_you-tube:hover{
-    color: #2ed3ae;
+.enlace_youtube1:hover{
+    color: #1f957b;
     transition: 0.5s;
 }
 /* <-------------enlace-you-tube------------> */
 /* <-----------enlace-P--------------------> */
-.enlace_P{
+.enlace_pinterest1{
     text-decoration: none;
-    color: black;
+    color: #2ed3ae;
 }
 
-.enlace_p:hover{
-    color: #2ed3ae;
+.enlace_pinterest1:hover{
+    color: #1f957b;
     transition: 0.5s;
 }
 /* <-----------enlace-P--------------------> */
 /* <--------------enlace-V----------------> */
-.enlace_V{
+.enlace_vimeo{
     text-decoration: none;
-    color: black;
+    color: #2ed3ae;
 }
 
-.enlace_V:hover{
-    color: #2ed3ae;
+.enlace_vimeo:hover{
+    color: #1f957b;
     transition: 0.5s;
 }
 
@@ -780,21 +834,69 @@
 
 /*----------------card-6-1 hasta el card-6-8--------------->  */
 
+
+/* <---------------card-numero-1----------------------> */
 .card-6-1{
     width: 100%;
     height: 260px;
     background-color: aqua;
     background-image: url(img/img-card-6-1.jpg);
     background-size: cover;
-    
 }
-.card-6-1:hover{
-    background: linear-gradient(
-        #b3e8dd, #1ad6ae
-    );
+
+
+.card-6-1:hover  .content-signo-mas{
+    opacity: .6;
     transition: 0.5s;
-    opacity: 0.5;
 }
+
+/* <---------------card-numero-1----------------------> */
+
+
+.content-signo-mas{
+    width: 100%;
+    height: 260px;
+    transition: .5s ease;
+    background: #1e9079;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton.mas{
+    display:inline-block;
+    width:150px;
+    height:150px;
+    border-radius:100%;
+    position:relative;
+    font-size: 40px;
+    cursor: pointer;
+  }
+  
+  .boton.mas::before{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:50%;
+    height:0;
+    border-top:3px solid white;
+  }
+
+  .boton.mas::after {
+    content:"";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:0;
+    height:50%;
+    border-left:3px solid white;
+  }
+
+/* <----------------card-numero-2-----------------------> */
 
 .card-6-2{
     width: 100%;
@@ -804,17 +906,14 @@
     background-size: cover;
 }
 
-.card-6-2:hover{
-    background: linear-gradient(
-        #b3e8dd, #1ad6ae
-    );
+
+.card-6-2:hover  .content-signo-mas{
+    opacity: .8;
     transition: 0.5s;
-    opacity: 0.5;
 }
+/* <----------------card-numero-2-----------------------> */
 
-
-
-
+/* <-----------------card-numero-3-----------------------> */
 .card-6-3{
     width: 100%;
     height: 260px;
@@ -823,13 +922,13 @@
     background-size: cover;
 }
 
-.card-6-3:hover{
-    background: linear-gradient(
-        #b3e8dd, #1ad6ae
-    );
+.card-6-3:hover .content-signo-mas{
+    opacity: .8;
     transition: 0.5s;
-    opacity: 0.5;
 }
+/* <-----------------card-numero-3-----------------------> */
+
+/* <-----------------card-numero-4------------------------> */
 
 .card-6-4{
     width: 100%;
@@ -839,13 +938,15 @@
     background-size: cover;
 }
 
-.card-6-4:hover{
-    background: linear-gradient(
-        #b3e8dd, #1ad6ae
-    );
+
+.card-6-4:hover .content-signo-mas{
+    opacity: .8;
     transition: 0.5s;
-    opacity: 0.5;
 }
+
+/* <-----------------card-numero-4------------------------> */
+
+/* <-----------------card-numero-5------------------------> */
 
 .card-6-5{
     width: 100%;
@@ -855,14 +956,14 @@
     background-size: cover;
 }
 
-.card-6-5:hover{
-    background: linear-gradient(
-        #b3e8dd, #1ad6ae
-    );
-    transition: 0.5s;
-    opacity: 0.5;
-}
 
+.card-6-5:hover .content-signo-mas{
+    opacity: .8;
+    transition: 0.5s;
+}
+/* <-----------------card-numero-5------------------------> */
+
+/* <----------------card-numero-6------------------------> */
 
 .card-6-6{
     width: 100%;
@@ -872,14 +973,15 @@
     background-size: cover;
 }
 
-.card-6-6:hover{
-    background: linear-gradient(
-        #b3e8dd, #1ad6ae
-    );
+
+.card-6-6:hover  .content-signo-mas{
+    opacity: .8;
     transition: 0.5s;
-    opacity: 0.5;
 }
 
+/* <----------------card-numero-6------------------------> */
+
+/* <-----------------card-numero-7-----------------------> */
 .card-6-7{
     width: 100%;
     height: 260px;
@@ -888,14 +990,14 @@
     background-size: cover;
 }
 
-.card-6-7:hover{
-    background: linear-gradient(
-        #b3e8dd, #1ad6ae
-    );
+.card-6-7:hover  .content-signo-mas{
+    opacity: .8;
     transition: 0.5s;
-    opacity: 0.5;
 }
 
+/* <-----------------card-numero-7-----------------------> */
+
+/* <-----------------card-numero-8----------------------> */
 .card-6-8{
     width: 100%;
     height: 260px;
@@ -904,13 +1006,12 @@
     background-size: cover;
 }
 
-.card-6-8:hover{
-    background: linear-gradient(
-        #b3e8dd, #1ad6ae
-    );
+
+.card-6-8:hover  .content-signo-mas{
+    opacity: .8;
     transition: 0.5s;
-    opacity: 0.5;
 }
+/* <-----------------card-numero-8----------------------> */
 
 
 /*----------------card-6-1 hasta el card-6-8--------------->  */
