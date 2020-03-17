@@ -53,6 +53,30 @@ setInterval(() =>{
 
 
 
+let contenedor = document.querySelector(".slider-texto-item");
+let btn_izquierda = document.getElementById("icono-izquierda");
+let btn_derecha = document.getElementById("icono-derecha");
+
+
+btn_izquierda.addEventListener("click", desaparecer);
+
+btn_derecha.addEventListener("click", aparecer);
+
+function desaparecer(){
+    btn_izquierda.style.display = "none";
+    btn_izquierda.style.transition = "0.5s";
+}
+
+function aparecer(){
+    btn_derecha.style.display = "block";
+    btn_derecha.style.transition = "0.5s";
+}
+
+
+
+
+
+
 
 
 
